@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%
+}
+
+#wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+ul > li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+#navBar,
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: silver;
+  /* border: 1px solid blue; */
+}
+
+#navBar_links {
+  /* border: 1px solid red; */
+  display: inline-flex;
+  width: 49.9%;
+}
+
+#navBar_login {
+  /* border: 1px solid red; */
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 49.9%;
+}
+
+#navBar_login .btn {
+  box-shadow: 1px 1px 2px black
+}
+
+#navBar_login .btn:hover {
+  color: yellow;
+}
+
+#navBar_login .btn:active {
+  box-shadow: 1px 1px 4px inset black;
+}
+
+#navBar_links ul,
+#navBar_login ul {
+  /* border: 1px solid green; */
+  display: inline-flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.modal-body > form > .input_form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.modal-header > .modal-title-connex,
+.modal-body > form > .input_form > .label_items_connex {
+  color: #0069D9;
+}
+
+.modal-header > .modal-title-inscript,
+.modal-body > form > .input_form > .label_items_inscript {
+  color: #138496;
+}
+
+.modal-body > form > .input_form > label:nth-child(1) {
+  margin-top: 15px;
+}
+
+.modal-body > form > .input_form > input {
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
