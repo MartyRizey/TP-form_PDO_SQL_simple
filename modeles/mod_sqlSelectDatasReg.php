@@ -18,11 +18,12 @@
     // https://www.php.net/manual/en/pdo.query.php
     $pdoStmnt = $connectBdd->query($getPseudoToBdd);
 
-    // sur mon objet PDOStatement obtenu j'aplique la méthode fetch() et passe
-    // en paramètre PDO::FETCH_OBJ
+    // sur mon objet PDOStatement obtenu j'aplique la méthode fetch() et passe en paramètre PDO::FETCH_OBJ
     // PDOStatement::fetch, récupère la ligne suivante d'un jeu de résultats.
-    // PDO::FETCH_OBJ, retourne un objet anonyme avec des noms de propriété qui
-    // correspondent aux noms de colonne retournés dans votre jeu de résultats.
+    /*
+       PDO::FETCH_OBJ, retourne un objet anonyme avec des noms de propriété qui correspondent aux noms de
+       colonne retournés dans votre jeu de résultats.
+     */
     return $pdoStmnt->fetch(PDO::FETCH_OBJ);
 
   }

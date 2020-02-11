@@ -29,7 +29,9 @@
           Pour utiliser un second modal voilà la structure que j'ai trouvé...
           Ajouter une balise avec l'attribut 'data-toggle' dans la balise <button>
         -->
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalInscription"><a data-toggle="modal">Inscription</a></button>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalInscription">
+          <a data-toggle="modal">Inscription</a>
+        </button>
       </li>
     </ul>
   </div>
