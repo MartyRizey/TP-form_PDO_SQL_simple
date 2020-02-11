@@ -27,16 +27,4 @@
 
 
 <!-- Attention ce bouton ne me déconnecte pas de ma session personnelle -->
-  <div class="return_cta" style="margin-top:2em">
-  <a href="../index.php"
-    style="padding: 0.5em;
-            border:solid 1px blue;
-            border-radius:5px;
-            margin-left:1em;
-            text-decoration:none;
-            background-color:blue;
-            color: white;
-            box-shadow: 2px 2px 2px silver;
-            font-family: sans-serif" > Retour
-  </a>
-</div>
+  <div class="return_cta"><a href="../index.php"> Retour</a></div>

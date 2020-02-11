@@ -1,20 +1,19 @@
-<?php
+<?php require_once __DIR__ . '\tpl_doctype.php'; ?>
 
-require_once __DIR__ . '\tpl_doctype.php'; ?>
+<section id="error_page">
 
-  <!-- Ne pas tenir compte du CSS dans les balises c'est juste parce que je me
-  concentre sur le côté back pour le moment. -->
+    <div id="error_page-warning">
+      <img class="error_page-warning_img" src="../assets/imgs/under-512.png" alt="travaux" />
+      <h2 class="error_page-warning_subTitle">Va ranger ta chambre c'est le chantier ...</h2>
+      <img class="error_page-warning_img" src="../assets/imgs/under-512.png" alt="travaux" />
+    </div>
 
-  <div style="display:flex; justify-content:center">
-    <img style="padding:0.5em" src="../assets/imgs/under-512.png" alt="travaux" width="100px"/>
-    <h2 style="align-self:center">Va ranger ta chambre c'est le chantier ...</h2>
-    <img style="padding:0.5em" src="../assets/imgs/under-512.png" alt="travaux" width="100px"/>
-  </div>
+    <h2 id="error_page-title">ERRORMODE 404 BREAK</h2>
 
-  <h2 style="text-align:center; padding: 0.7em; color:red; text-shadow:1px 1px 2px silver">ERRORMODE 404 BREAK</h2>
+    <div id="error_page-img">
+      <img src="../assets/imgs/Peug404break.jpg" alt="Peugeot 404 break" />
+    </div>
 
-  <div style="display:flex; justify-content:center">
-    <img src="../assets/imgs/Peug404break.jpg" alt="Peugeot 404 break" />
-  </div>
+    <p><a href="../index.php" class="error_page-cta_return"><- Retour</a></p>
 
-  <p><a href="../index.php" style="padding: 0.5em; border:solid 1px blue; border-radius:5px; margin-left:1em"><- Retour</a></p>
+</section>

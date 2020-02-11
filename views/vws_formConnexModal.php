@@ -33,7 +33,7 @@
           <div class="modal-footer">
             <!--
               Ici je soumet mon formulaire, les données sont transmisent au fichier qui est en valeur de l'attribut 'action' dans
-              la balise <form>et elles seront transmisent en POST comme indiqué par la valeur de l'attribut 'method'
+              la balise <form> et elles seront transmisent en POST comme indiqué par la valeur de l'attribut 'method'
             -->
             <button type="submit" class="btn btn-primary">Login</button>
             <!-- <input type="submit" class="btn btn-primary" value="Login"/> -->
