@@ -1,8 +1,8 @@
 <?php
 
-  require_once 'inc_connexBdd.php';
+  require_once '../inc/inc_connexBdd.php';
   // J'ai besoin de ma requête ici, je requiers le fichier qui la contient ici.
-  require_once 'mod_sqlSelectDatasForConnex.php';
+  require_once '../modeles/mod_sqlSelectDatasForConnex.php';
 
   // je récupére les données de mon formulaire de connexion du fichier vws_formConnexModal.php
   $email    = trim(filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL, FILTER_SANITIZE_FULL_SPECIAL_CHARS));
@@ -38,12 +38,12 @@
       // et je me relocalise sur la page d'un utilisateur.
       session_start();
       $_SESSION['pseudo'] = $userConnex['pseudo'];
-      header('Location: vws_userHome.php');
+      header('Location: ../views/vws_userHome.php');
 
     } else {
-      header('Location: vws_404error.php');
+      header('Location: ../views/vws_404error.php');
     }
 
   } else {
-    header('Location: index.php');
+    header('Location: ../index.php');
   }

@@ -2,7 +2,7 @@
 
   session_start();
   // Je requieres le fichier contenant ma fonction pour me déconnecter de mon compte.
-  require_once 'inc_logOutUserConnex.php';
+  require_once '../inc/inc_logOutUserConnex.php';
 
   // Si pesudo en Session existe et qu'il n'est pas vide, je rentre dans la condition.
   if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])): ?>
@@ -21,14 +21,14 @@
       </button>
     </form>
 
-  <?php else: header('Location: index.php'); ?>
+  <?php else: header('Location: ../index.php'); ?>
 
   <?php endif; ?>
 
 
 <!-- Attention ce bouton ne me déconnecte pas de ma session personnelle -->
   <div class="return_cta" style="margin-top:2em">
-  <a href="index.php"
+  <a href="../index.php"
     style="padding: 0.5em;
             border:solid 1px blue;
             border-radius:5px;

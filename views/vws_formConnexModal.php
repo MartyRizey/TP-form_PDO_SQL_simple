@@ -13,8 +13,8 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-      <!-- Je transmet les données saisies dans le fichier GetConnexDatas_ctrl.php -->
-        <form action="Ctrl_selectDatasForConnex.php" method="POST">
+      <!-- Je transmet les données saisies dans le fichier Ctrl_selectDatasForConnex.php -->
+        <form action="Controllers/Ctrl_selectDatasForConnex.php" method="POST">
 
           <!-- <input type="hidden" name="userId" value="" /> -->
 
@@ -32,10 +32,8 @@
           <!-- Modal footer -->
           <div class="modal-footer">
             <!--
-              Ici je soumet mon formulaire, les données sont transmisent au
-              fichier qui est en valeur de l'attribut 'action' dans la balise
-              <form>et elles seront transmisent en POST comme indiqué par la
-              valeur de l'attribut 'method'
+              Ici je soumet mon formulaire, les données sont transmisent au fichier qui est en valeur de l'attribut 'action' dans la balise
+              <form>et elles seront transmisent en POST comme indiqué par la valeur de l'attribut 'method'
             -->
             <button type="submit" class="btn btn-primary">Login</button>
             <!-- <input type="submit" class="btn btn-primary" value="Login"/> -->

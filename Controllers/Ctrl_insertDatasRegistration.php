@@ -1,13 +1,13 @@
 <?php
 
 // je requiers la connexion à ma Bdd qui est dans le fichier connex_bdd.php, ici.
-require_once 'inc_connexBdd.php';
+require_once '../inc/inc_connexBdd.php';
 // je requiers la requête de selection qui est dans le fichier sqlSelectDatasReg.php
 // , ici.
-require_once 'mod_sqlSelectDatasReg.php';
+require_once '../modeles/mod_sqlSelectDatasReg.php';
 // je requiers la requête d'insertion des données en Bdd qui est dans le fichier
 // sqlInsertDatasReg.php, ici.
-require_once 'mod_sqlInsertDatasReg.php';
+require_once '../modeles/mod_sqlInsertDatasReg.php';
 
 // Je récupére les données du formulaire d'inscription pour les traiter et les
 // stocks dans des variables => $birthday = htmlspecialchars(trim($_POST['birthday']));
@@ -40,7 +40,7 @@ if(isset($pseudo) && !empty($pseudo)){
   if(!empty($selectPseudoInBdd->pseudo) === $pseudo){
 
     // Je redirige vers la page index.php.
-    header('Location: index.php');
+    header('Location: ../index.php');
 
     // Sinon j'exécute le code ci-dessous.
   } else {
@@ -65,19 +65,19 @@ if(isset($pseudo) && !empty($pseudo)){
         sqlInsertDatasReg($connectBdd, $pseudo, $birthday, $email, $pwdHash);
 
         // une fois ceci fait je redirige vers index.php
-        header('Location: index.php');
+        header('Location: ../index.php');
         exit();
 
       } else {
-        header('Location: vws_404error.php');
+        header('Location: ../views/vws_404error.php');
       }
 
     } else {
-      header('Location: vws_404error.php');
+      header('Location: ../views/vws_404error.php');
     }
 
   }
 
 } else {
-  header('Location: vws_404error.php');
+  header('Location: ../views/vws_404error.php');
 }

@@ -9,4 +9,4 @@ ini_set('display_errors', true);
 error_reporting(E_ALL);
 
 // require './inc/folderPathConstant.php';
-require_once __DIR__ . '/home.php';
+require_once __DIR__ . '/views/home.php';
