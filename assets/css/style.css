@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  outline: none;
+}
+
+:focus {
+  outline: 0;
 }
 
 body {
@@ -98,6 +103,17 @@ footer {
   color: green;
 }
 
+.home_page-message {
+  display: block;
+  width: 70%;
+  text-align: center;
+  margin: 1em auto;
+  border: 1px solid silver;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  text-shadow: 1px 1px 2px silver;
+}
+
 /* -------- Modal Formulaire -------- */
 .modal-body > form > .input_form {
   display: flex;
@@ -119,6 +135,14 @@ footer {
 
 .modal-body > form > .input_form > label:nth-child(1) {
   margin-top: 15px;
+}
+
+.modal-body > form > .input_form-connex_bkgd > input:focus {
+  background-color: rgba(112, 157, 240, 0.5);
+}
+
+.modal-body > form > .input_form-reg_bkgd > input:focus {
+  background-color: rgba(23, 155, 175, 0.5);
 }
 
 .modal-body > form > .input_form > input {
@@ -162,18 +186,39 @@ footer {
 }
 
 /* -------- page perso utilisateur -------- */
+
+.user_page-title {
+  margin-top: 1.2em;
+}
+
+.user_page-btnDeconnexion,
 .return_cta {
-  margin-top: 2em;
+  margin: 2em 0 2em 0;
+}
+
+.user_page-btnDeconnexion {
+  border-radius: 5px;
+  padding: 0.1em 0.3em 0.2em 0.3em;
+  outline: none;  
+}
+
+.user_page-btnDeconnexion:hover {
+  color: gold;
+  text-shadow: 1px 1px 1px black;
+}
+
+.user_page-btnDeconnexion:active {
+  box-shadow: 2px 2px 4px inset gray;
+  outline: none;
 }
 
 .return_cta a {
   padding: 0.5em;
-  border:solid 1px blue;
-  border-radius:5px;
-  margin-left:1em;
-  text-decoration:none;
-  background-color:blue;
-  color: white;
+  border: solid 1px blue;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: blue;
+  color:  white;
   box-shadow: 2px 2px 2px silver;
   font-family: sans-serif;
 }

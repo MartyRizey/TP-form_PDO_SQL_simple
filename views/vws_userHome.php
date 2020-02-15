@@ -3,28 +3,44 @@
   session_start();
   // Je requieres le fichier contenant ma fonction pour me déconnecter de mon compte.
   require_once '../inc/inc_logOutUserConnex.php';
+  require_once __DIR__ . '/tpl_doctype.php';
+  require_once __DIR__ . '/tpl_header.php';
 
-  // Si pesudo en Session existe et qu'il n'est pas vide, je rentre dans la condition.
+  /*
+   je vérifie que mon password et mon email en SESSION existent ...
+   - SI oui (valeur après le ?) alors je stocke les valeurs saisies dans des variables.
+   - SINON (valeur après les :) alors je stocke une chaîne de caractères vide.
+  */
+  $pwd = (isset($_SESSION['password'])) ? $_SESSION['password'] : '' ;
+  $mail = (isset($_SESSION['email'])) ? $_SESSION['email'] : '' ;
+  
+  // Si pseudo en Session existe et qu'il n'est pas vide, je rentre dans la condition.
   if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])): ?>
 
-    <h2>Vous êtes connecté à votre compte <em><?= $_SESSION['pseudo']; ?></em>.</h2>
+  <section id="user_page">
+
+    <h2 class="user_page-title">Vous êtes connecté à votre compte <em><?= $_SESSION['pseudo']; ?></em>.</h2>
 
     <form action="" method="post">
       <!--
-        - En cliquant sur le bouton j'active la fonction qui me permet de me
-        déconnecter de mon compte.
+        En cliquant sur le bouton j'active la fonction logOutUser() qui permet de me déconnecter de 
+        mon compte.
       -->
       <button type="submit"
-              name="button"
-              value="<?php logOutUser($_session['pseudo'], $_session['password'], $_session['email']); ?>"
+              class="user_page-btnDeconnexion"
+              name="button"              
+              value="<?php logOutUser($_SESSION['pseudo'], $pwd, $mail); ?>"
               >Déconnection
       </button>
     </form>
 
-  <?php else: header('Location: ../index.php'); ?>
+  <?php else: //header('Location: ../index.php'); ?>
 
-  <?php endif; ?>
+    <!-- Attention ce bouton ne me déconnecte pas de ma session personnelle -->
+    <div class="return_cta"><a href="../index.php"> Retour</a></div>
 
+  <?php endif; ?>    
 
-<!-- Attention ce bouton ne me déconnecte pas de ma session personnelle -->
-  <div class="return_cta"><a href="../index.php"> Retour</a></div>
+  </section>
+
+  <?php require_once __DIR__ . '/tpl_footer.php'; ?>

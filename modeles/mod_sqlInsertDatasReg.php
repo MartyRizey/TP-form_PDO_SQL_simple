@@ -34,17 +34,17 @@ function sqlInsertDatasReg($connectBdd, $pseudo, $birthday, $email, $pwdHash){
   $pdoStmt->execute();
 
   // Stock le nobre de ligne que renvoi mon objet PDOStatement
-  $affectedRows = $pdoStmt->rowCount();
+  // $affectedRows = $pdoStmt->rowCount();
 
   // Si l'exécution de la requête me renvoie 0 ou false, c'est que l'insert c'est mal passé.
-  if($affectedRows === FALSE || $affectedRows === 0){
-    return FALSE;
-  }
+  // if($affectedRows === FALSE || $affectedRows === 0){
+    // return FALSE;
+  // }
     // Sinon j'insére le dernier id retourné dans l'objet courant ($this)
     // https://www.php.net/manual/en/pdo.lastinsertid
-    else {
-      $this->id = $pdo->lastInsertId();
-      return TRUE;
-    }
+    // else {
+      // $this->id = $pdo->lastInsertId();
+      // return TRUE;
+    // }
 
 }

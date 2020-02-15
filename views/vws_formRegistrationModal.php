@@ -18,7 +18,7 @@
       <!-- Je transmet les données saisies dans le fichier Ctrl_insertDatasRegistration.php -->
         <form action="Controllers/Ctrl_insertDatasRegistration.php" method="POST">
 
-          <div class="input_form">
+          <div class="input_form input_form-reg_bkgd">
 
             <!--
               [x] : Pensez à faire un test pour savoir SI le speudo existe dèjà en Bdd, SINON faire une requête d'insertion en
@@ -38,8 +38,8 @@
               [x] : Hacher le mot de passe avec password_hash(), le stocker en Bdd.Vérifier à la connexion que le password saisie
                     dans le formulaire de conexion corresponde avec le mot de passe hacher en Bdd avec password_verify().
             -->
-            <label class="label_items_inscript" for="pass">Votre mot de passe : </label>
-              <input type="password" name="password" id="pass" placeholder="mot de passe" required />
+            <label class="label_items_inscript" for="pass">Votre mot de passe : <em>12 caractères maximum.</em></label>
+              <input type="password" name="password" id="pass" placeholder="mot de passe" title="Le mot de passe ne doit pas dépasser 12 caractères" required />
 
           </div>
           <br>

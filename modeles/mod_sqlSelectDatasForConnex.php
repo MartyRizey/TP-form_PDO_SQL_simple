@@ -11,7 +11,7 @@ function getDatasToformConnex($connectBdd, $mail){
   // - j'applique sur mon objet PDO (la connexion) la méthode query() et passe en paramètre ma requête.
   // - PDO::query, Exécute une instruction SQL, renvoyant un jeu de résultats en tant qu'objet PDOStatement.
   // https://www.php.net/manual/en/pdo.query.php
-  $pdoStmt = $connectBdd->query($getDatasToConnex);
+  $pdoStmt = $connectBdd->query($getDatasToConnex);  
 
   // - sur mon objet PDOStatement obtenu j'aplique la méthode fetch() et passe en paramètre PDO::FETCH_ASOOC
   // - PDOStatement::fetch, récupère la ligne suivante d'un jeu de résultats.

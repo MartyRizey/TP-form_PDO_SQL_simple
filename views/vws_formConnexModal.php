@@ -18,13 +18,13 @@
 
           <!-- <input type="hidden" name="userId" value="" /> -->
 
-          <div class="input_form">
+          <div class="input_form input_form-connex_bkgd">
 
             <label class="label_items_connex" for="mail">Votre email : </label>
               <input type="email" name="email" id="mail" placeholder="johnDoe@mail.fr" required />
 
-            <label class="label_items_connex" for="pass">Votre mot de passe : </label>
-              <input type="password" name="password" id="pass" placeholder="mot de passe" required />
+            <label class="label_items_connex" for="pass">Votre mot de passe : <em>12 caractères maximum.</em></label>
+              <input type="password" name="password" id="pass" placeholder="mot de passe" title="Le mot de passe ne doit pas dépasser 12 caractères" required />
 
           </div>
           <br>
