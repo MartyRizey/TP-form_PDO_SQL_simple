@@ -1,20 +1,29 @@
 
 # ```Back-End : PHP / PDO / SQL / Bdd```
+
 ## Transmission des données
 
 ### L'idée : _travailler dans un premier temps :_  
+
   > - [x] Un formulaire d'inscription.  
   > - [x] Un formulaire de connexion.
+
 ---
+
 #### ```Fonctionnalitées à ajouter```
 
+
   > _**Formulaire d'inscription.**_
+
   - [ ] Ajouter un message quand on est redirigé vers la page index :
+
     - [ ] lorsque l'insertion en Bdd c'est bien faite.
     - [ ] ou lorsqu'il y a eu problème.  
 
   > _**Ajouter une page admin.**_   
+
   - [ ] En ce connectant via un email et un password admin specifique.
+
   - [ ] Sur la page afficher la liste des comptes en Bdd.
   - [ ] Créer un bouton :
       - [ ] _Supp_
@@ -23,8 +32,11 @@
       - [ ] _ordre alphabètique_.
       - [ ] _par email_.
       - [ ] _par date_.
+
   #### ```Faire du CSS correct```
+
   >_**Appliquer du style et de la mise en forme.**_
+
   - [x] HTML sur les fichiers concernés
   - [x] CSS sur les fichiers concernés également.
 
@@ -95,7 +107,7 @@
                                 └> ../index.php
                                    ../views/vws_404error.php
 
-                             ------------------------------------------------------------
+                                   ---------------------------------------------------------------------------------------------------------------------------------------------
 
              => views/tpl_navbar.php                           <-| views/vws_formConnexionModal.php
                   |
